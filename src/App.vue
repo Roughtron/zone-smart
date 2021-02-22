@@ -7,7 +7,6 @@
 #app
     font-family: 'Roboto', sans-serif
 
-
 .visually-hidden
     position: absolute
     clip: rect(0, 0, 0, 0)
