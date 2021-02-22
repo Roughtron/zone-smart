@@ -9,6 +9,14 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/sign-in',
+        name: 'sign.in',
+        component: () => import(/* webpackChunkName: "auth" */ '../views/SignIn.vue'),
+        meta: {
+            layout: 'blank'
+        }
     }
 ]
 
