@@ -31,6 +31,13 @@ body
     height: 100%
     font-family: 'Roboto', sans-serif
 
+button
+    margin: 0
+    padding: 0
+    background: none
+    border: none
+    outline: none
+
 .visually-hidden
     position: absolute
     clip: rect(0, 0, 0, 0)

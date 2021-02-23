@@ -68,6 +68,10 @@ export default {
     &_type_block
         width: 100%
 
+    &_content_auth
+        .button__text
+            text-transform: uppercase
+
 @keyframes load
     0%
         background-position: 0 0

@@ -29,15 +29,15 @@ export default {
             type: String
         },
         classes: {
-            type: String,
-            default: ''
+            type: Object,
+            default: () => {}
         },
         errors: {
             type: Array,
             default: undefined
         },
         ariaMsg: {
-            type: String
+            type: Object
         },
         hideLabel: {
             type: Boolean,

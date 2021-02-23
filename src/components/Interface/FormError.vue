@@ -23,5 +23,6 @@ export default {
 <style lang="sass" scoped>
 .form-error
     margin-top: 5px
+    font-size: 14px
     color: #ff002e
 </style>
