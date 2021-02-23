@@ -4,11 +4,28 @@ import Home from '@/views/Home.vue'
 
 Vue.use(VueRouter)
 
+const unauthorized = (to, from, next) => {
+    if (!localStorage.getItem('api_token')) {
+        next()
+        return
+    }
+    next({ name: 'Home' })
+}
+
+const authorized = (to, from, next) => {
+    if (localStorage.getItem('api_token')) {
+        next()
+        return
+    }
+    next({ name: 'sign.in' })
+}
+
 const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home
+        component: Home,
+        beforeEnter: authorized
     },
     {
         path: '/sign-in',
@@ -16,7 +33,8 @@ const routes = [
         component: () => import(/* webpackChunkName: "auth" */ '../views/SignIn.vue'),
         meta: {
             layout: 'blank'
-        }
+        },
+        beforeEnter: unauthorized
     }
 ]
 
