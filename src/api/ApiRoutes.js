@@ -8,6 +8,15 @@ export default {
         Refresh: `${BaseAuth}/jwt/refresh/`
     },
     Orders: {
-        GetAll: `${BaseZoneSmart}/order/`
+        GetAll: payload => {
+            const { limit, offset, search } = payload
+            let url = `${BaseZoneSmart}/order/`
+
+            url += limit ? `?limit=${limit}` : '?limit=10'
+            url += offset ? `&offset=${offset}` : '&offset=0'
+            url += search ? `&search=${search}` : ''
+
+            return url
+        }
     }
 }
