@@ -30,6 +30,7 @@
     .column
         &_layout_a
             flex-basis: 220px
+            flex-shrink: 0
             color: #fff
             background-color: #132739
 

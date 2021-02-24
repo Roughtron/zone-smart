@@ -60,7 +60,6 @@ export default {
 
     &__title
         display: block
-        margin-bottom: 5px
 
     &__content
         display: block

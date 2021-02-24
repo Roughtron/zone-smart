@@ -30,4 +30,10 @@
 
         &:last-child
             margin-bottom: 0
+
+    &_viewtype_horizontal
+        display: flex
+
+        .form-fields-list__item
+            margin-bottom: 0
 </style>

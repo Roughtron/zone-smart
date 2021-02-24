@@ -38,6 +38,11 @@ button
     border: none
     outline: none
 
+.link
+    color: #3cc8ae
+    text-decoration: none
+    cursor: pointer
+
 .visually-hidden
     position: absolute
     clip: rect(0, 0, 0, 0)

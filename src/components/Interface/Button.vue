@@ -36,7 +36,7 @@ export default {
 
     &[disabled]
         opacity: .5
-        cursor: inherit
+        cursor: not-allowed
 
     &__text
         position: relative
@@ -48,6 +48,7 @@ export default {
         font-size: 16px
         line-height: 52px
         text-align: center
+        text-transform: uppercase
         color: #fff
         white-space: nowrap
         background: #3cc8ae
@@ -58,6 +59,9 @@ export default {
         &:focus
             background-color: #10e9bf
 
+            &[disabled]
+                background: #3cc8ae
+
         &.is-load
             background: linear-gradient(-45deg, #3cc8ae 25%, transparent 25%, transparent 50%, #3cc8ae 50%, #3cc8ae 75%, transparent 75%, transparent)
             background-color: #10e9bf
@@ -65,12 +69,45 @@ export default {
             animation: load 2s linear infinite
             pointer-events: none
 
+        &.is-small
+            height: 32px
+            line-height: 32px
+            font-size: 14px
+
+    &_viewtype_secondary
+        height: 52px
+        padding: 0 10px
+        font-size: 16px
+        line-height: 52px
+        text-align: center
+        text-transform: uppercase
+        color: #fff
+        white-space: nowrap
+        background: #0f1b25
+        border-radius: 5px
+        transition: background-color .3s, opacity .3s
+
+        &:hover,
+        &:focus
+            background-color: #223a4e
+
+            &[disabled]
+                background: #0f1b25
+
+        &.is-load
+            background: linear-gradient(-45deg, #0f1b25 25%, transparent 25%, transparent 50%, #0f1b25 50%, #0f1b25 75%, transparent 75%, transparent)
+            background-color: #223a4e
+            background-size: 50px 50px
+            animation: load 2s linear infinite
+            pointer-events: none
+
+        &.is-small
+            height: 32px
+            line-height: 32px
+            font-size: 14px
+
     &_type_block
         width: 100%
-
-    &_content_auth
-        .button__text
-            text-transform: uppercase
 
 @keyframes load
     0%

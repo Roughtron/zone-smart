@@ -66,7 +66,14 @@ export default {
         cursor: pointer
         transform: translateY(-50%)
 
+        .form-field__icon
+            position: static
+
     &__icon
+        position: absolute
+        top: 50%
+        right: 14px
         width: 24px
         height: 24px
+        transform: translateY(-50%)
 </style>

@@ -17,6 +17,20 @@ Vue.component('svg-icon', SvgIcon)
 
 Vue.filter('date', value => moment(value).format('DD.MM.YYYY'))
 
+Vue.filter('currency', (value, currency) => {
+    switch (currency) {
+    case 'USD':
+        return `$${value}`
+
+    default:
+        return `${value}руб.`
+    }
+})
+
+Vue.filter('toFixed', (value, num) => {
+    return value.toFixed(num)
+})
+
 new Vue({
     router,
     store,

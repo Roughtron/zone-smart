@@ -66,7 +66,7 @@
                                         )
 
                     li.form-fields-list__item
-                        btn.button_type_block.button_viewtype_primary.button_content_auth(
+                        btn.button_type_block.button_viewtype_primary(
                             type="submit"
                             :class="{ 'is-load': isLoading }"
                         ) Войти
@@ -78,7 +78,6 @@ import TheForm from '@/components/Interface/Form.vue'
 import FieldComposition from '@/components/Interface/FieldComposition.vue'
 import InputField from '@/components/Interface/Input.vue'
 import Btn from '@/components/Interface/Button.vue'
-import Checkbox from '@/components/Interface/Checkbox.vue'
 
 const { mapActions } = createNamespacedHelpers('profile')
 
@@ -98,8 +97,7 @@ export default {
         TheForm,
         FieldComposition,
         InputField,
-        Btn,
-        Checkbox
+        Btn
     },
 
     methods: {
