@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import moment from 'moment'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -13,6 +14,8 @@ Vue.config.productionTip = false
 Vue.component('default-layout', Default)
 Vue.component('blank-layout', Blank)
 Vue.component('svg-icon', SvgIcon)
+
+Vue.filter('date', value => moment(value).format('DD.MM.YYYY'))
 
 new Vue({
     router,
